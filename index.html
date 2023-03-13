@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogomide's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h2 class="logo">Ogomide.</h2>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hi, my name is</p>
+                <h1>Daramola Ogomide</h1>
+                <p class="header-text-body">A Frontend developer who is passionate about creating aesthetically pleasing, functional and engaging User interface designs for mobile applications.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="passport.PNG" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Daramola Ogomide, a Frontend Developer from Nigeria with a passion for creating aesthetically pleasing, functional and engaging User interface designs for mobile applications(android and Ios devices). Having experience in design, I have a keen eye for clean designs which gives me a unique perspective toward frontend development.</p>
+                    <p>When i'm not trying to solve any coding related problem, i am most likely watching a movie or listening to music. I enjoy exploring new technologies and contributing to open source projects. I am looking for opportunities to help me improve my skills as a frontend developer and I'm open to work on any interesting projects where i can add value to it.</p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('technical')">Technical Skills</div>
+                        <div class="tab-links" onclick="opentab('soft')">Soft Skills</div>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="technical">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>Javascript</li>
+                            <li>React Native</li>
+                            <li>Figma</li>
+                            <li>Github</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="soft">
+                        <ul>
+                            <li>TeamWork</li>
+                            <li>Analytical Thinking</li>
+                            <li>Multi-tasking</li>
+                            <li>Communication</li>
+                            <li>Adaptable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Projects -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="elevenintro.png" alt="">
+                    <div class="layer">
+                        <h3>Eleven Crypto App</h3>
+                        <p> A cryptocurrency mobile tracking application using an external Api that allows its users to track crypto assets in real time.</p>
+                        <a href="https://github.com/iam-ogomide/eleven-crypto-app">Github Code</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="foodincintro.png" alt="">
+                    <div class="layer">
+                        <h3>Food Inc</h3>
+                        <p>A restaurant mobile application that allows users to purchase different variety of dishes </p>
+                        <a href="https://github.com/iam-ogomide/food-inc">Github Code</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="sushiintro.png" alt="">
+                    <div class="layer">
+                        <h3>The Sushi shop</h3>
+                        <p>A sushi themed restaurant mobile application built with react  native.</p>
+                        <a href="https://github.com/iam-ogomide/Sushi-shop">Github Code</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="blueintro.png" alt="">
+                    <div class="layer">
+                        <h3>Blue Travel App</h3>
+                        <p>A travel agency mobile application that allows its users to plan and book various trips to the various locations listed within the app.</p>
+                        <a href="">Github Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact</h1>
+                    <p><i class="fa-solid fa-envelope"></i> ogomidedaramola@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>+2348065514361</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ogomide-daramola-a79484250/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/iam-ogomide"><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="Dev01.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Full Name" required>
+                        <input type="email" name="Email" placeholder="Email address" required>
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwJRMooZyZeyItKMcuYm3Xw3GazDlLCjc9r_vpxUJVs2LR5CnYOedkkUbXlLauAjyXejQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
